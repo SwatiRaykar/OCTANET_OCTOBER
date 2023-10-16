@@ -1,0 +1,153 @@
+/* **************SignUp********************* */
+/* signUp style */
+
+.popup{
+    width:100vw;
+    height: 830px;
+    background-color:#14020f ;
+    position: relative;
+    margin-top: 432px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    text-align: center;
+    color: #333;
+    transition: transform 1s ,top 0.4s;
+    visibility: visible;
+    opacity: 0.85;
+    z-index: 3;
+    overflow-y: hidden;
+  }
+    .opensignUp{
+      transform: translate(-50%,-50%) scale(1);
+      visibility: visible;
+      top: 55%;
+  }
+  
+     h3{
+      font-size: 15px;
+         text-align: center;
+         color:rgb(239, 143, 218) ;
+     }
+     h1{
+         text-align: center;
+         color: rgb(247, 4, 186);
+         font-style: italic;
+
+     }
+     #para1{
+         text-align: center;
+         font-size: 28px;
+         color: rgb(71, 2, 71);
+         font-family: Georgia, 'Times New Roman', 
+         Times, serif;
+         margin: -11px 0px;
+         padding: 6px 14px;
+         -webkit-text-stroke:0.2px rgb(246, 249, 250) ;
+     }
+     #para{
+         text-align: center;
+         font-size: 15px;
+         color: rgb(248, 6, 220);
+         font-family: Georgia, 'Times New Roman', 
+         Times, serif;
+         margin: 0px 0px;
+         padding: 16px 14px;
+         -webkit-text-stroke:0.2px rgb(201, 138, 243) ;
+     }
+     small{
+      margin-left: -300px;
+    }
+    .closesgn{
+      position: absolute;
+      background-color: rgb(161, 159, 159);
+      padding:5px 6px;
+      border: none;
+      color: red;
+      margin-top: -27px;
+      margin-left: 235px;
+    }
+     
+  .bttn{
+     display: block;
+      width: 120px;
+      height: 50px;
+      margin:20px auto;
+      border:rgba(247, 247, 242, 0) ridge 4px;
+      font-size: 18px;
+      font-family:Arial, Helvetica, sans-serif;
+       background-color: rgb(242, 237, 237);
+       color: rgb(9, 9, 9);
+  }
+  .form-group {
+      position: relative;
+      font-size:20px;
+      -webkit-text-stroke:0.5px rgb(13, 14, 14) ;
+      margin: 10px;
+  }
+  .form-group input{
+      /* position: relative; */
+      width: 420px;
+      margin: 18px auto;
+      /* text-align: center; */
+      cursor:text;
+      font-size: 15px;
+      padding: 5px;
+      padding-left: 33px;
+      border: #000 2.5px ridge;
+      color: rgb(6, 5, 5);
+      border-radius: 8px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: #fdf8f8;
+  }
+  .form-group span{
+      /* display: inline; */
+      position: absolute;
+       margin-top: -10px;
+       padding-top: 5px;
+       color: rgb(241, 56, 204);
+       /* overflow: visible; */
+    }
+  input[type='email'],input[type='password']{
+      border: none;
+      outline: none;
+      box-shadow: none;
+      width: 100%;
+    }
+
+    .Tretement{
+      display: flex ;
+      flex-direction: column;
+      margin-left:-200px ;
+      align-items: center;
+      justify-content: center;
+      text-align: center
+
+      }
+
+    .Tretement span{
+      color:rgb(241, 56, 204);
+      font-size: 20px;
+    }
+    .Tretement small{
+      color:rgb(241, 56, 204);
+      font-size: 15px;
+      margin-left: 0px;
+    }
+    .Tretement div{
+      color: white;
+      margin-left: 0px;
+
+
+    }
+
+    label{
+      margin-right: 40px;
+    }
+    
+  /* Footer */
+  .footer{
+    margin-top: -415px;
+    overflow-y: hidden;
+  }
+ 

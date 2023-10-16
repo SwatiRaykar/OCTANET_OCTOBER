@@ -1,0 +1,123 @@
+/* Styling For the Section2       */
+.section{
+  position:absolute;
+  height: 350px;
+  width: 100%;
+  margin-top: 0px;
+  /* border:3px solid red; */
+  background-color: #24011e;
+  background-image: linear-gradient(to left top  ,rgb(94, 9, 80)10%,rgba(10, 1, 5, 0),rgb(55, 1, 51));
+overflow-y: hidden;
+z-index: 1;
+  }
+  #FirstDiv{
+    height:100px;
+    overflow: visible;
+
+  }
+  #threediv{
+    height:10px;
+    overflow: visible;
+
+  }
+  #threediv div {
+    overflow: hidden;
+
+  }
+ #FirstDiv div{
+  height: 50px;
+  width: 350px;
+  margin: 10px;
+  /* overflow: hidden; */
+}
+#FirstDiv:first-child{
+  color: rgb(230, 215, 215);
+  height: 100px;
+  width: 380px;
+  margin: 20px;
+  text-align: justify;
+  /* overflow-y: visible; */
+
+}
+#FirstDiv div img{
+  height:50px;
+  width:50px;
+ }
+#FirstDiv div p{
+  color: #83fab0;
+  margin-top: -37px;
+  margin-left: 60px;
+}
+/* #SecondDiv  Styling    */
+ #SecondDiv{
+   margin-top: -120px;
+   margin-left:450px ;
+ } 
+ #SecondDiv h1{
+   color:rgb(245, 3, 217);
+   font-size: 45px;
+   font-family: 'Ma Shan Zheng', cursive;
+   font-weight: 500;
+
+ }
+ #SecondDiv #twodiv .one{
+   margin-top:40px;
+   overflow-y: hidden;
+
+ }
+ #SecondDiv #twodiv img{
+   height:50px;
+   width:50px;
+ }
+ #SecondDiv #twodiv p{
+  color: rgb(207, 247, 207);
+  margin-top:-40px;
+  margin-left:60px;
+ }
+ #SecondDiv #twodiv p i{
+     color: rgb(241, 7, 229);
+ }
+/* #ThirdDiv Styling      */
+#ThirdDiv {
+ /* border:red 2px ridge; */
+ row-gap: 2px;
+ column-gap: 2px;
+ margin-left:780px;
+ margin-top:-225px;
+ height: 400px;
+ width: 550px;
+
+
+ }
+#ThirdDiv #awards img{
+ height: 30vh;
+ width: 14vw; 
+ margin: 10px -20px;
+
+}
+
+#ThirdDiv h1{
+ color:rgb(245, 3, 245);
+   font-size: 45px;
+   font-family: 'Ma Shan Zheng', cursive;
+   font-weight: 500;
+ }
+#awards{
+ display: flex;
+flex-wrap: wrap;
+}
+.two{
+  overflow: hidden;
+}
+footer{
+ background-color: #050505;
+ color:rgb(249, 246, 246);
+ position:absolute;
+ margin-top: 350px;
+ height:50px;
+ width: 100%;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+
+}

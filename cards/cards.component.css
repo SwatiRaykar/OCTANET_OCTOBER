@@ -1,0 +1,57 @@
+.cards {
+    background-color: rgb(233, 234, 237);
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+    gap: 15px;
+  }
+  .card1 {
+    height: auto;
+    width: 250px;
+    background-color: rgb(254, 252, 252);
+    box-shadow: 2px 2px rgb(253, 251, 251);
+    /* border:1px white ridge; */
+    border-radius: 10px;
+    margin: 7px;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card1:hover {
+    background-color: rgb(253, 254, 255);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 1s ease;
+    width: 254px;
+    box-shadow: 2px 2px 30px rgb(122, 125, 125);
+  }
+  .card1 img {
+    margin-top: -40px;
+    margin-left:2px ;
+    height: 230px;
+    width: 250px;
+    border-radius: 10px;
+  }
+  .card1 h3{
+    margin-top: 46px;
+    text-align:center;
+font-size: 20px;
+  }
+  .card1 p{
+    margin: 12px;
+    text-align:justify;
+  }
+  #myBtn{
+    background-color: black;
+    color: white;
+    padding:5px;
+    margin: 10px 75px;
+    border-radius: 5px;
+  }
+  #bookToday{
+    color: red;
+  }
+  #more {display: none;
+  }

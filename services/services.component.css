@@ -1,0 +1,98 @@
+#services{
+    height: 500px;
+    background-color: rgb(123, 2, 117);
+    /* opacity: 0.9; */
+    margin-top: 0px;
+}
+
+
+.curve{
+    height: 80vh;
+    width: 102vw;
+    border: 9px solid rgb(245, 9, 166);
+    background-color: rgb(7, 6, 7);
+    border-radius: 50%;
+    margin-top: -200px;
+    margin-left: -20px;
+}
+.curve h1{
+   color: rgb(245, 11, 245);
+   margin-top: 250px;
+   margin-left: 310px;
+}
+.curve h3{
+    color: white;
+    margin-top: 20px;
+    margin-left: 330px;
+}
+
+
+
+
+#services .img:hover {
+    background-color: rgb(245, 9, 166);
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: all 1s ease;
+    width: 226px;
+    box-shadow: 5px 5px 30px rgb(228, 160, 202);
+  }
+  #services .img {
+    position: absolute;
+    margin-left:19px ;
+    height: 205px;
+    width: 228px;
+    border-radius: 50%;
+    margin-top: -180px;
+background-color: rgb(245, 9, 166);
+overflow-y: hidden;
+  }
+  #services img {
+    margin-left:17px ;
+    height: 200px;
+    width: 220px;
+    border-radius: 50%;
+    margin-top: 10px;
+
+  }
+  #services #img2 {
+    margin-left:277px ;
+    margin-top: -140px;
+    height: 235px;
+    width: 258px;
+ }
+#img2 img{
+    height: 240px;
+    width: 250px; 
+ }
+ #services #img3 {
+    margin-left:570px ;
+    margin-top: -130px;
+    height: 265px;
+    width: 288px;
+ }
+ #img3 img{
+    height: 270px;
+    width: 280px; 
+ }
+ #services #img4 {
+    margin-left:980px ;
+    margin-top: -130px;
+    height: 154px;
+    width: 154px;
+    background-color: yellow;
+    box-shadow: 5px 5px 30px rgb(246, 231, 25);
+
+ }
+ #img4 img{
+    height: 150px;
+    width: 150px; 
+    margin-left: 3px;
+    margin-top: 2px;
+ }
+
+  .cards{
+    /* position: absolute; */
+    margin-top: 100px;
+
+  }

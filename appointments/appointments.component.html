@@ -1,0 +1,63 @@
+
+<div class="popup" id="popup"  >
+    <p id="para">IT'S ALWAYS THE PERFECT TIME TO</p>
+    <!-- <button class="closesgn" (click)="closeSignup()">X</button> -->
+    <p id="para1">Book Your</p>
+    <h1>Appointment</h1>
+    <h3>(*Please Enter your valid Details)</h3>
+    <form action="#" method="post" [formGroup]="appointmentForm">
+      <!-- <label for="name">Name:</label> -->
+      <div class="form-group"  [class.error]="appointmentForm.controls['Name'].dirty && appointmentForm.hasError('required','Name')">
+        <span>Name:</span>
+        <input formControlName="Name" type="text" name="Name" placeholder="FirstName  MiddleName Lastname" />
+      </div>
+      <small *ngIf="appointmentForm.controls['Name'].dirty && appointmentForm.hasError('required','Name')" style="color: red;">*Firstname is required</small>
+  
+      <div class="form-group"  [class.error]="appointmentForm.controls['Address'].dirty && appointmentForm.hasError('required','lastname')">
+        <span >Address:</span>
+        <input formControlName="Address" type="text" name="Address" placeholder="Address" />
+      </div>
+      <small *ngIf="appointmentForm.controls['Address'].dirty && appointmentForm.hasError('required','Address')" style="color: red;">*Address is required</small>
+  
+      <div class="form-group"  [class.error]="appointmentForm.controls['EmailId'].dirty && appointmentForm.hasError('required','EmailId')">
+        <span >Email:</span>
+        <input formControlName="EmailId" type="email" name="EmailId" placeholder="eg.abc@gmail.com" />
+      </div>
+      <small *ngIf="appointmentForm.controls['EmailId'].dirty && appointmentForm.hasError('required','EmailId')" style="color: red;">*Email Id is required</small>
+  
+        <div class="form-group" [class.error]="appointmentForm.controls['PhoneNumber'].dirty && appointmentForm.hasError('required','PhoneNumber')" >
+          <span >Phone Number:</span>
+          <input formControlName="PhoneNumber" type="number" name="Phone Number" placeholder="Phone number" />
+        </div>
+        <small *ngIf="appointmentForm.controls['PhoneNumber'].dirty && appointmentForm.hasError('required','PhoneNumber')" style="color: red;">*Phone Number is required</small>
+       
+        <div class="Tretement">
+          <span >Services: <small>You can select one or more services</small></span>
+
+          <label for="">Services</label>
+          <div *ngFor="let service1 of SalonServicesArray;let i=index">
+           <label for="">
+               <input type="checkbox" (change)="onChange($event)" class="form-check-input" name="services1" id="" [value]="service1">
+              {{service1}}
+               </label>
+          </div>
+        </div>
+
+  
+    
+
+     <div class="form-group"  [class.error]="appointmentForm.controls['Date'].dirty && appointmentForm.hasError('required','Date')">
+      <span>Date:</span>
+      <input formControlName="Date" type="date" name="date" placeholder="Select date" />
+    </div>
+    <small *ngIf="appointmentForm.controls['Date'].dirty && appointmentForm.hasError('required','Date')" style="color: red;">*Date is required</small>
+   
+       <!-- put condition on submit button if loged in then user can submit the form -->
+      <button  (click)="onAppointmSubmit()" type="submit" class="bttn">BOOK</button>
+    </form>
+  </div>
+
+<div class="footer">
+  <app-footer ></app-footer>
+
+</div>

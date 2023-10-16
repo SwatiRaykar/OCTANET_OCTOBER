@@ -1,0 +1,56 @@
+<div class="popup" id="popup" [hidden]="closedSignup"   >
+  <p id="para">IT'S ALWAYS THE PERFECT TIME TO</p>
+  <button class="closesgn" (click)="closeSignup()">X</button>
+  <p id="para1">Transform your Life</p>
+  <h1>SIGN UP</h1>
+  <h3>(*Please Enter your valid Details)</h3>
+  <form action="#" method="post" [formGroup]="signUpForm">
+    <!-- <label for="name">Name:</label> -->
+    <div class="form-group"  [class.error]="signUpForm.controls['FirstName'].dirty && signUpForm.hasError('required','FirstName')">
+      <span class="fa fa-user fa-x"></span>
+      <input formControlName="FirstName" type="text" name="FirstName" placeholder="FirstName" />
+    </div>
+    <small *ngIf="signUpForm.controls['FirstName'].dirty && signUpForm.hasError('required','FirstName')" style="color: red;">*Firstname is required</small>
+
+    <div class="form-group"  [class.error]="signUpForm.controls['lastname'].dirty && signUpForm.hasError('required','lastname')">
+      <span class="fa fa-user fa-x"></span>
+      <input formControlName="lastname" type="text" name="LastName" placeholder="LastName" />
+    </div>
+    <small *ngIf="signUpForm.controls['lastname'].dirty && signUpForm.hasError('required','lastname')" style="color: red;">*Lastname is required</small>
+
+    <div class="form-group"  [class.error]="signUpForm.controls['EmailId'].dirty && signUpForm.hasError('required','EmailId')">
+      <span class="fa fa-envelope fa-x"></span>
+      <input formControlName="EmailId" type="email" name="EmailId" placeholder="eg.abc@gmail.com" />
+    </div>
+    <small *ngIf="signUpForm.controls['EmailId'].dirty && signUpForm.hasError('required','EmailId')" style="color: red;">*Email Id is required</small>
+
+    <div class="form-group"  [class.error]="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">
+      <span class="fa fa-lock fa-1x"></span> 
+        <input formControlName="password" [type]="[passType]" name="Password" placeholder="password">
+    </div>
+    <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')" style="color: red;">*Password is required</small>
+
+    <span class="fa {{eyeIcon}} eyeIcon" (click)="hideShowPass()"></span> 
+      <div class="form-group" [class.error]="signUpForm.controls['PhoneNumber'].dirty && signUpForm.hasError('required','PhoneNumber')" >
+        <span class="fa fa-phone fa-x"></span>
+        <input formControlName="PhoneNumber" type="number" name="Phone Number" placeholder="Phone number" />
+      </div>
+      <small *ngIf="signUpForm.controls['PhoneNumber'].dirty && signUpForm.hasError('required','PhoneNumber')" style="color: red;">*Phone Number is required</small>
+
+
+    <!-- <h3 >
+      (*If you already have registered please click on )
+      <span ><a routerLink="/login">LogIn</a></span> -->
+      <!-- <span (click)="openLogin()"><a  href="#" routerlink="LogIn">LogIn</a></span> -->
+    <!-- </h3> -->
+    
+    <!-- <button [disabled]="signUpForm.invalid" (click)="onSignup()" type="submit" class="bttn">SignUp</button> -->
+
+    <button  (click)="onSignup()" type="submit" class="bttn">SignUp</button>
+  </form>
+</div>
+<!-- <app-login
+  class="Lpopup"
+  [ngClass]="{ openloginpopup: Isclicked === true }"
+></app-login> -->
+

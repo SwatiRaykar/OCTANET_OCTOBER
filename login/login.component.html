@@ -1,0 +1,32 @@
+
+<!-- Login form-->
+<div class="LPopup" id="logPopup" [hidden]="Closelogin" ><br>
+  <p id="para">IT'S ALWAYS THE PERFECT TIME TO</p>
+
+  <p id="para1">Transform your Life</p>
+
+  <h1>LOGIN</h1>
+  <button class="closelgn" (click)="Oncloselog()">X</button>
+    <form [formGroup]="loginForm" >
+
+    <div class="form-group" [class.error]="loginForm.controls['EmailId'].dirty && loginForm.hasError('required','EmailId')">
+      <span class="fa fa-user fa-x"></span>
+       <input formControlName="EmailId" type="email" name="EmailId"  placeholder="Email Id">
+      </div>
+     <small *ngIf="loginForm.controls['EmailId'].dirty && loginForm.hasError('required','EmailId')" style="color: red;">*Usename is required</small>
+    
+  <div class="form-group" [class.error]="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">
+      <span class="fa fa-lock fa-1x"></span>  
+        <input formControlName="Password" [type]="[passType]" name="Password" placeholder="Password" >
+    </div>
+    <span class="fa {{eyeIcon}} eyeIcon" (click)="hideShowPass()"></span> 
+    <small *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')" style="color: red;">*Password is required</small>
+
+    <h3>(*If you already have registered please click on )
+        <span (click)="Oncloselog()" ><a routerLink="sign-up">SignUp</a> OR </span>
+        <!-- <span (click)="openLogin()"><a  href="#" routerlink="LogIn">LogIn</a></span> -->
+      <a (click)="Oncloselog()" routerLink="/forgot-pwd">Forgot Password</a></h3>
+
+     <button [disabled]="loginForm.invalid" class="bttn"  (click)="onLogin()" type="submit">LogIn</button>
+</form>
+ </div>

@@ -1,0 +1,33 @@
+<div>
+
+  <nav class="navigation">
+   
+      <img 
+        src="https://i.pinimg.com/originals/cb/4a/bb/cb4abb700ea0015c2046622658924fb6.png"
+        alt="Logo not found"
+      />
+      <input type="checkbox" name="" id="check">
+      <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
+    <ul>
+      <li [routerLinkActive]="'active'"><a [routerLink]="'home'">HOME</a></li>
+      <li [routerLinkActive]="'active'"><a [routerLink]="['Appointments']" >APPOINTMENTS</a></li>
+      <li [routerLinkActive]="'active'"><a [routerLink]="['gallery']" >GALLARY</a></li>
+      <!-- <li><a href="#services">SERVICES</a></li> For Smoothly page change -->
+      <li [routerLinkActive]="'active'"><a [routerLink]="'services'">SERVICES</a></li>
+      <li [routerLinkActive]="'active'"><a [routerLink]="'prices'">PRICES</a></li>
+      <li [routerLinkActive]="'active'"><a [routerLink]="'contact-us'">CONTACT</a></li>
+      <button  type="button" id="loginBtn" *ngIf="!isLoggedIn" (click)="navigateToLogin()" >LOGIN</button>
+      
+    </ul>
+       <!-- <button  type="button" id="loginBtn" *ngIf="!isLoggedIn" [routerLink]="'login'" >LOGIN</button> -->
+                <button  type="button" id="loginBtn" *ngIf="!isLoggedIn" (click)="navigateToLogin()" >LOGIN</button>
+                <h3 [ngClass]="{openloginpopup:isclicked===true}" class="welcome fa fa-user fa-x" *ngIf="isLoggedIn"  >{{ WelcomeUserName }}</h3>
+
+        <button  type="button" id="cartBtn">CART</button>
+  </nav>
+</div>
+
+<div ><br>
+  <app-login (WelcomeUser)="OnAddedUsername($event)" (CustomerId)="OnSendUserId($event)" (ClosedLogin)="OnCloseLogin($event)" class="LPopup" id="logPopup"  [ngClass]="{openloginpopup:isclicked===true}"  ></app-login>
+  
+    

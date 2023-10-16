@@ -1,0 +1,47 @@
+<div class="popup" id="popup" [hidden]="closedResetPwd"   >
+    <p id="para">IT'S ALWAYS THE PERFECT TIME TO</p>
+    <button class="closerst" (click)="closeResetPWD()">X</button>
+    <p id="para1">Transform your Life</p>
+    <h1>RESET PASSWORD</h1>
+    <h3>(*Please Enter your valid Details)</h3>
+    <form action="#" method="post" [formGroup]="resetPwdForm">
+        <div class="form-group"  [class.error]="resetPwdForm.controls['EmailId'].dirty && resetPwdForm.hasError('required','EmailId')">
+            <span class="fa fa-envelope fa-x"></span>
+            <input formControlName="EmailId" type="email" name="EmailId" placeholder="eg.abc@gmail.com" />
+          </div>
+          <small *ngIf="resetPwdForm.controls['EmailId'].dirty && resetPwdForm.hasError('required','EmailId')" style="color: red;">*Email Id is required</small>
+      
+      <div class="form-group"  [class.error]="resetPwdForm.controls['Token'].dirty && resetPwdForm.hasError('required','Token')">
+        <span class="fa fa-key fa-x"></span>
+        <input formControlName="Token" type="text" name="Token" placeholder="Token" />
+      </div>
+      <small *ngIf="resetPwdForm.controls['Token'].dirty && resetPwdForm.hasError('required','Token')" style="color: red;">*Token is required</small>
+  
+     
+      <div class="form-group"  [class.error]="resetPwdForm.controls['Newpassword'].dirty && resetPwdForm.hasError('required','Newpassword')">
+        <span class="fa fa-lock fa-1x"></span> 
+          <input formControlName="Newpassword" [type]="[passType]" name="Password" placeholder="Newpassword">
+      </div>
+      <small *ngIf="resetPwdForm.controls['Newpassword'].dirty && resetPwdForm.hasError('required','Newpassword')" style="color: red;">*Password is required</small>
+  
+      <div class="form-group"  [class.error]="resetPwdForm.controls['confirmpassword'].dirty && resetPwdForm.hasError('required','confirmpassword')">
+        <span class="fa fa-lock fa-1x"></span> 
+          <input formControlName="confirmpassword" [type]="[passType]" name="confirmpassword" placeholder="Confirm password">
+      </div>
+      <small *ngIf="resetPwdForm.controls['confirmpassword'].dirty && resetPwdForm.hasError('required','confirmpassword')" style="color: red;">*Password is required</small>
+  
+      
+  
+      
+      
+      <!-- <button [disabled]="signUpForm.invalid" (click)="onSignup()" type="submit" class="bttn">SignUp</button> -->
+  
+      <button [disabled]="resetPwdForm.invalid"  (click)="onResetPWD()" type="submit" class="bttn">Reset Password</button>
+    </form>
+  </div>
+  <!-- <app-login
+    class="Lpopup"
+    [ngClass]="{ openloginpopup: Isclicked === true }"
+  ></app-login> -->
+  
+  

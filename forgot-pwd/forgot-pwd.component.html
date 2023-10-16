@@ -1,0 +1,24 @@
+<!-- Login form-->
+<div class="LPopup" id="logPopup" [hidden]="Closelogin" ><br>
+
+    <h1>Reset Password</h1>
+    <h3>Enter Registered e-mail to reset password</h3>
+
+    <button class="closelgn" (click)="Fclose()">X</button>
+      <form [formGroup]="ForgotPWDForm" >
+  
+      <div class="form-group" [class.error]="ForgotPWDForm.controls['EmailId'].dirty && ForgotPWDForm.hasError('required','EmailId')">
+        <span class="fa fa-envelope fa-x"></span>
+         <input formControlName="EmailId" type="email" name="EmailId"  placeholder="Email Id">
+        </div>
+       <small *ngIf="ForgotPWDForm.controls['EmailId'].dirty && ForgotPWDForm.hasError('required','EmailId')" style="color: red;">*Usename is required</small>
+    
+  
+       <h3>(*If you already have registered please click on )
+          <span ><a routerLink="/sign-up">SignUp</a> OR </span></h3>
+          <!-- <span (click)="openLogin()"><a  href="#" routerlink="LogIn">LogIn</a></span> -->
+  
+       <button [disabled]="ForgotPWDForm.invalid" class="bttn" (click)="onForgotPWD()" type="submit" >Send Reset Password Link</button>
+  </form>
+   </div>
+  
