@@ -1,0 +1,15 @@
+﻿@model IEnumerable<EmployeePaySlip.Models.Tables.Employee>
+
+
+
+@foreach (var item in Model)
+{
+    <div>
+        <span>@item.Id</span>
+        <!-- other display properties... -->
+        <form action="@Url.Action("Delete", "Employee")" method="post">
+            @Html.Hidden("Id", item.Id)
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+}

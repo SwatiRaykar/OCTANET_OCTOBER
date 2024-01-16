@@ -1,0 +1,62 @@
+﻿@model EmployeePaySlip.Models.AddEmpViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Add Employee</h2>
+
+
+
+<form method="post" action="AddEmployee" class="mt-3">
+    <div class="mb-2">
+        <label for="" class="form-label">Employee Code</label>
+        <input type="text" class="form-control" asp-for="EmpCode" />
+    </div>
+    <div class="mb-2">
+        <label for="" class="form-label">FirstName</label>
+        <input type="text" class="form-control" asp-for="FirstName" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">LastName</label>
+        <input type="text" class="form-control" asp-for="LastName" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DOB" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Basic</label>
+        <input type="number" class="form-control" asp-for="BasicSal" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">TA</label>
+        <input type="number" class="form-control" asp-for="TA" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">HRA</label>
+        <input type="number" class="form-control" asp-for="HRA" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Gross</label>
+        <input type="number" class="form-control" asp-for="Gross" />
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Provident Fund</label>
+        <input type="number" class="form-control" asp-for="ProvidentFund" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Professional Tax</label>
+        <input type="number" class="form-control" asp-for="ProfTax" />
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Net Salary</label>
+        <input type="number" class="form-control"  asp-for="NetSalary" />
+    </div>
+   
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Clear</button>
+
+
+</form>
+
